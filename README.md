@@ -7,9 +7,23 @@ Este é um projeto de exemplo que utiliza Spring Boot 3, Spring Security 6 e JWT
 ### Autenticação
 - **POST /login**
   - Permite que os usuários façam login no sistema e recebam um token JWT para autenticação em outros endpoints.
+   ```
+{
+    "login": "luisfelipe",
+    "password": 12345
+}
+```
   
 - **POST /register**
   - Permite o registro de novos usuários no sistema.
+```
+{
+    "login": "luisfelipe",
+    "password": 12345,
+    "email": "luis@gmail.com",
+    "role": "ADMIN"
+}
+```
 
 ### Produtos
 - **GET /products**
@@ -19,6 +33,12 @@ Este é um projeto de exemplo que utiliza Spring Boot 3, Spring Security 6 e JWT
 - **POST /products**
   - Endpoint acessível apenas para usuários com função ADMIN.
   - Permite a criação de novos produtos no sistema.
+```
+ {
+    "name": "Computador",
+    "value": 100
+}
+```
 
 ## Autorização por Função
 - **USER**
